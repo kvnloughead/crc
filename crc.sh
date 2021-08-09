@@ -56,7 +56,7 @@ NAME=${POS_ARGS[0]}
 
 mkdir $NAME
 # redirect text from template into component.jsx
-cat ./crc-templates/func-component.jsx > $NAME/$NAME.jsx
+cat ~/bin/crc/crc-templates/func-component.jsx > $NAME/$NAME.jsx
 # replace instances of string COMPONENT with the supplied name of component
 sed -i -e 's/COMPONENT/'$NAME'/g' $NAME/$NAME.jsx 
 touch $NAME/styles.css
