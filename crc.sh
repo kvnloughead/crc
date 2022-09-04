@@ -24,10 +24,10 @@
 #
 #     cwd
 #       |____ component-name/
-#                           |______ component-name.js
+#                           |______ component-name.jsx
 #                           |______ styles.css
 #
-#   Fills js file with boiler plate found in the templates directory.
+#   Fills jsx file with boiler plate found in the templates directory.
 #   If `-s sc` option is set, replaces styles.css with styles.js and
 #   adds a few necessary import statements for working with styled-components.
 #
@@ -55,11 +55,11 @@ done
 NAME=${POS_ARGS[0]}
 
 mkdir $NAME
-# redirect text from template into component.js
-cat ~/bin/crc/templates/func-component.js > $NAME/$NAME.js
+# redirect text from template into component.jsx
+cat ~/bin/crc/templates/func-component.jsx > $NAME/$NAME.jsx
 # replace instances of string COMPONENT with the supplied name of component
-sed -i -e 's/COMPONENT/'$NAME'/g' $NAME/$NAME.js
-touch $NAME/styles.css
+sed -i -e 's/COMPONENT/'$NAME'/g' $NAME/$NAME.jsx
+touch $NAME/$NAME.css
 
 while getopts  "s:m:c" flag; do
   case $flag in

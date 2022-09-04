@@ -1,9 +1,8 @@
 import React from 'react';
+import './COMPONENT.css';
 
 const COMPONENT = () => {
-  return (
-    <></>
-  );
+  return <></>;
 };
 
 export default COMPONENT;
